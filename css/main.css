@@ -1,0 +1,470 @@
+body {
+    background-color: #f2f2f2;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 1.6em;
+    color: #555;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 400;
+    color: #333;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #FFCC66;
+    word-wrap: break-word;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*---------------------------------------------------
+   Browse Happy prompt
+---------------------------------------------------*/
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/*---------------------------------------------------
+	3.1 Topbar
+---------------------------------------------------*/
+#section-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    overflow: visible;
+    font: normal 1em/2.2em  'Lato';
+}
+
+#section-topbar a {
+    /*color: #00B4FF;*/
+    color: #FFF;
+}
+
+#topbar-inner {
+    background: #2e2e2e;
+    line-height: 0;
+    text-align: center;
+}
+
+/* Top Bar -- By default, top navigation bar uses "fixed" position */
+#section-topbar ul#nav {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #222;
+    /* For IE, the outcast */
+    zoom:1;
+    *display: inline;
+}
+
+#section-topbar ul#nav > li {
+    display: block;
+    float: left;
+    padding: 0;
+}
+
+#section-topbar ul#nav a {
+    display: block;
+    font: normal 0.6em/1.78em "Lato";
+    text-decoration: none;
+    padding: 18px 18px 18px 18px;
+    border-left: 1px solid #222;
+}
+
+#section-topbar ul#nav a:hover {
+    background: #222;
+    text-decoration: none;
+    border-left: 1px solid #111;
+}
+
+#section-topbar ul#nav .active a {
+    background: #222;
+    border-left: 1px solid #111;
+}
+
+#section-topbar ul#nav .active a:hover {
+    background: #222;
+}
+
+#section-topbar i {
+    font-size: 2.3em;
+}
+
+/*---------------------------------------------------
+	3.1 Header Wrap
+---------------------------------------------------*/
+#headerwrap {
+    background: url(http://img.craigmcmurray.co/header_mobile.jpg) no-repeat center top;
+    margin-top: 59px;
+    padding-top: 140px;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 500px;
+    width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+    font-size: 2.75em;
+    color: black;
+}
+
+#headerwrap h2 {
+    font-size: 1.7em;
+    font-weight: 500;
+    color: black;
+}
+
+/*---------------------------------------------------
+	3.1 About Me Wrap
+---------------------------------------------------*/
+#aboutme {
+    background: #003366;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+#aboutme h3, p {
+    color: white;
+}
+
+#aboutme i {
+    color: white;
+    font-size: 1.25em;
+    padding-right: 8px;
+    vertical-align: middle;
+}
+
+/*---------------------------------------------------
+	3.1 Skills Wrap
+---------------------------------------------------*/
+#skillswrap {
+    background: #003366;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: white;
+}
+
+#skillswrap h3, p {
+    color: white;
+}
+
+/*---------------------------------------------------
+	3.1 Resume Wrap
+---------------------------------------------------*/
+#resume {
+    margin-bottom: 15px;
+}
+
+/*---------------------------------------------------
+	3.1 Work Wrap
+---------------------------------------------------*/
+#work {
+    background: #003366;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+#work .row {
+    margin-bottom: 35px;
+}
+
+#work .row:last-child {
+    margin-bottom: 0px;
+}
+
+#work h3, p {
+    color: white;
+}
+
+#work i {
+    color: white;
+    font-size: 1.25em;
+    padding-right: 8px;
+    vertical-align: middle;
+}
+
+#work more {
+    font-size: 0.9em;
+}
+
+#work h4, h3 {
+    margin-top: 0px;
+}
+
+#work h4 {
+    padding-top: 20px;
+}
+
+#work .project-description {
+    padding-top: 15px;
+}
+
+#contactme {
+    background: #FFCC66;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+#contactme p {
+    color: #003366;
+}
+
+#contactme h3 {
+    color: #003366;
+}
+
+#contactme t {
+    font-weight: 700;
+}
+
+#contactme .socialIcon {
+    padding-right: 20px;
+    color: #336699;
+    font-size: 1.1em;
+}
+
+#contactme label, .alert {
+    font-size: 0.8em;
+}
+#contactme sm {
+    font-weight: bold;
+}
+
+/* Copyright Wrap */
+#copyright {
+    background: #2e2e2e;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #FFF;
+    font-size: 0.8em;
+}
+
+#copyright p {
+    margin-bottom: 0px;
+}
+
+/* Global Values */
+.desc {
+    padding-top: 45px;
+}
+
+.desc p {
+    color: #2f2f2f;
+}
+
+.desc t {
+    color: #003366;
+    font-weight: 700;
+}
+
+.desc .current {
+    margin-top: 10px;
+}
+
+.desc imp {
+    padding: 6px;
+    color: white;
+    background: #003366;
+}
+
+.desc more {
+    color: #95a5a6;
+}
+
+sm {
+    font-size: 0.775em;
+    padding-right: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+.date {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/* Margin & Padding classes */
+.ml15 {
+    margin-left: 15px;
+}
+
+.pt05 {
+    padding-top: 5px;
+}
+
+.pb05 {
+    padding-bottom: 5px;
+}
+
+.pb15 {
+    padding-bottom: 15px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pb25 {
+    padding-bottom: 25px;
+}
+
+/*---------------------------------------------------
+     MEDIA QUERIES
+---------------------------------------------------*/
+@media only screen and (min-width: 320px) {
+    #headerwrap {
+        padding-top: 100px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #headerwrap {
+        background: url(http://img.craigmcmurray.co/header_tablet.jpg) no-repeat center top;
+    }
+	.date {
+		padding-top: 0;
+	}
+    #resume {
+        margin-bottom: 0px;
+    }
+    #work h4 {
+        padding-top: 0px;
+    }
+    .desc .item {
+        padding-bottom: 15px;
+    }
+    input[type='text']:focus, input[type='email']:focus, textarea:focus {
+        font-size: 1.14285714em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #headerwrap h1 {
+        font-size: 3.75em;
+    }
+    #work .project-description {
+        padding-top: 0px;
+    }
+    input[type='text']:focus, input[type='email']:focus, textarea:focus {
+        font-size: 1.14285714em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #headerwrap h1 {
+        font-size: 3.75em;
+    }
+    #work .project-description {
+        padding-top: 0px;
+    }
+    input[type='text']:focus, input[type='email']:focus, textarea:focus {
+        font-size: 1.14285714em;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    #headerwrap {
+        background: url(http://img.craigmcmurray.co/header.jpg) no-repeat center top;
+        margin-top: 59px;
+        padding-top: 140px;
+        text-align: center;
+        background-attachment: relative;
+        background-position: center center;
+        min-height: 500px;
+        width: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #headerwrap h1 {
+        font-size: 3.75em;
+    }
+    #work .project-description {
+        padding-top: 0px;
+    }
+    #work .row:last-child {
+        margin-bottom: 35px;
+    }
+}
