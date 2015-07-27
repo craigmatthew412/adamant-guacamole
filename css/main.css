@@ -1,3 +1,8 @@
+html,
+body {
+    height: 100%;
+}
+
 body {
     background-color: #f2f2f2;
     font-family: "Lato";
@@ -39,7 +44,8 @@ p {
 }
 
 /* Links */
-a {
+a,
+a:focus {
     color: #FFCC66;
     word-wrap: break-word;
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -50,8 +56,8 @@ a {
 }
 
 a:hover,
-a:focus {
-    color: #7b7b7b;
+a:focus{
+    color: #FFCC66;
     text-decoration: none;
     outline: 0;
 }
@@ -95,6 +101,15 @@ hr {
     z-index: 10000;
     overflow: visible;
     font: normal 1em/2.2em  'Lato';
+
+    opacity: 0 ;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 #section-topbar a {
@@ -158,12 +173,12 @@ hr {
 ---------------------------------------------------*/
 #headerwrap {
     background: url(http://img.craigmcmurray.co/header_mobile.jpg) no-repeat center top;
-    margin-top: 59px;
-    padding-top: 140px;
+    /*margin-top: 59px;*/
+    /*padding-top: 140px;*/
     text-align: center;
     background-attachment: relative;
     background-position: center center;
-    min-height: 500px;
+    height: 100%;
     width: 100%;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -185,6 +200,16 @@ hr {
     font-weight: 500;
     color: black;
 }
+
+#headerwrap .enter-btn {
+    font-size: 1.5em;
+}
+
+/*
+#headerwrap .welcome-text {
+    padding-top: 0;
+}
+*/
 
 /*---------------------------------------------------
 	3.1 About Me Wrap
@@ -388,16 +413,15 @@ textarea {
 /*---------------------------------------------------
      MEDIA QUERIES
 ---------------------------------------------------*/
+/*
 @media only screen and (min-width: 320px) {
     #headerwrap {
         padding-top: 100px;
     }
 }
+*/
 
 @media only screen and (min-width: 600px) {
-    #headerwrap {
-        background: url(http://img.craigmcmurray.co/header_tablet.jpg) no-repeat center top;
-    }
 	.date {
 		padding-top: 0;
 	}
@@ -416,6 +440,9 @@ textarea {
 }
 
 @media only screen and (min-width: 768px) {
+    #headerwrap {
+        background: url(http://img.craigmcmurray.co/header_tablet_portrait.jpg) no-repeat center top;
+    }
     #headerwrap h1 {
         font-size: 3.75em;
     }
@@ -428,6 +455,9 @@ textarea {
 }
 
 @media only screen and (min-width: 1024px) {
+    #headerwrap {
+        background: url(http://img.craigmcmurray.co/header_tablet_landscape.jpg) no-repeat center top;
+    }
     #headerwrap h1 {
         font-size: 3.75em;
     }
@@ -442,12 +472,11 @@ textarea {
 @media only screen and (min-width: 1025px) {
     #headerwrap {
         background: url(http://img.craigmcmurray.co/header.jpg) no-repeat center top;
-        margin-top: 59px;
-        padding-top: 140px;
+        /*margin-top: 59px;*/
+        /*padding-top: 140px;*/
         text-align: center;
         background-attachment: relative;
         background-position: center center;
-        min-height: 500px;
         width: 100%;
         -webkit-background-size: 100%;
         -moz-background-size: 100%;
