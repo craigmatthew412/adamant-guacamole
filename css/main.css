@@ -298,6 +298,10 @@ hr {
     padding-top: 15px;
 }
 
+#work .project-description p {
+    margin-bottom: 0;
+}
+
 #contactme {
     background: #FFCC66;
     padding-top: 60px;
