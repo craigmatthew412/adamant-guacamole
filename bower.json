@@ -1,0 +1,30 @@
+{
+  "name": "adamant-guacamole",
+  "version": "0.1.0",
+  "homepage": "",
+  "description": "Personal portfolio website",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "authors": [
+    "Craig McMurray"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "build",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap-sass": "~3.3.5",
+    "bourbon": "~4.2.3",
+    "neat": "~1.7.2",
+    "font-awesome-sass": "~4.3.1",
+    "normalize.css": "~3.0.3"
+  }
+}

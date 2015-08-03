@@ -1,0 +1,480 @@
+/**
+ * @author Craig McMurray
+ * @desc This file follows the SMACSS design philosophy
+ */
+
+/*************** IMPORT STYLES ***************/
+//Twitter Bootstrap
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+//Font Awesome Icons
+@import '../../bower_components/font-awesome-sass/assets/stylesheets/font-awesome';
+//Bourbon
+//@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+//Neat
+//@import '../../bower_components/neat/app/assets/stylesheets/neat';
+//@import '../../node_modules/angular-material/angular-material.css';
+//DSG Defined Variables
+@import 'vars';
+
+
+html,
+body,
+div[ui-view] {
+	height: 100%;
+}
+
+body {
+	background-color: #f2f2f2;
+	font-family: "Lato";
+	font-weight: 400;
+	font-size: 1.6em;
+	color: #555;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1,
+h2 {
+	font-family: "Raleway";
+	font-weight: 400;
+	color: #333;
+}
+
+h3 {
+	font-size: 1.15em;
+}
+
+h4 {
+	font-size: 1em;
+}
+
+h3,
+h4 {
+	font-weight: 600;
+}
+
+/* Paragraph & Typographic */
+p {
+	line-height: 28px;
+	margin-bottom: 25px;
+}
+
+.centered {
+	text-align: center;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+	color: rgb(102, 132, 163);
+	text-decoration: underline;
+	outline: 0;
+	cursor: pointer;
+}
+
+a,
+a:focus {
+	word-wrap: break-word;
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:before,
+a:after {
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+form {
+	padding-bottom: 15px;
+}
+
+/*---------------------------------------------------
+   Browse Happy prompt
+---------------------------------------------------*/
+.browsehappy {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+/*---------------------------------------------------
+	3.1 Header Wrap
+---------------------------------------------------*/
+#headerwrap {
+	background: url(http://img.craigmcmurray.co/header_tablet_landscape.jpg) no-repeat center top;
+	text-align: center;
+	background-attachment: scroll;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+}
+
+#headerwrap h1 {
+	margin-top: 0;
+	font-size: 2.25em;
+	color: black;
+}
+
+#headerwrap h2 {
+	font-size: 1.5em;
+}
+
+#headerwrap a:last-of-type {
+	margin-right: 0;
+}
+
+#headerwrap .enter-btn {
+	font-size: 1.5em;
+}
+
+/*---------------------------------------------------
+	3.0 Common Styles
+---------------------------------------------------*/
+
+#aboutme,
+#work,
+#contactme {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+#aboutme h3,
+#resume h3,
+#work h3,
+#contactme h3,
+#contactme h4 {
+	margin-top: 0px;
+}
+
+#aboutme,
+#work {
+	background-color: rgb(246,246,246);
+}
+
+#aboutme,
+#work,
+#resume {
+	color: #003366;
+}
+
+#aboutme p,
+#contactme p {
+	margin-bottom: 0;
+}
+
+/*---------------------------------------------------
+	3.1 About Me Wrap
+---------------------------------------------------*/
+#aboutme h3 small {
+	display: block;
+	padding-top: 5px;
+}
+
+#aboutme i {
+	color: #003366;
+	font-size: 1.25em;
+	padding-right: 8px;
+	vertical-align: middle;
+}
+
+/*---------------------------------------------------
+	3.2 Resume Wrap
+---------------------------------------------------*/
+#resume {
+	background-color: rgb(255,255,255);
+}
+
+/*---------------------------------------------------
+	3.3 Portfolio Wrap
+---------------------------------------------------*/
+#work .row {
+	margin-bottom: 35px;
+}
+
+#work .row:last-child {
+	margin-bottom: 0px;
+}
+
+#work h3,
+#work h4 {
+	margin-top: 0px;
+}
+
+#work i {
+	color: white;
+	font-size: 1.25em;
+	padding-right: 8px;
+	vertical-align: middle;
+}
+
+#work more {
+	font-size: 0.9em;
+}
+
+#work .project-description {
+	padding-top: 15px;
+}
+
+#work .project-description p {
+	margin-bottom: 0;
+}
+
+/*---------------------------------------------------
+	3.4 Contact Wrap
+---------------------------------------------------*/
+#contactme p,
+#contactme h3,
+#contactme h4 {
+	color: #003366;
+}
+
+#contactme t {
+	font-weight: 700;
+}
+
+#contactme .socialIcon {
+	padding-right: 20px;
+	color: #336699;
+	font-size: 1.1em;
+}
+
+#contactme label, .alert {
+	font-size: 0.8em;
+}
+#contactme sm {
+	font-weight: bold;
+}
+
+/* Copyright Wrap */
+#copyright {
+	background: #2e2e2e;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.8em;
+}
+
+#copyright p {
+	margin-bottom: 0px;
+}
+
+/* Global Values */
+.desc {
+	padding-top: 45px;
+}
+
+.desc:first-of-type {
+	padding-top: 60px;
+}
+
+.desc:last-of-type {
+	padding-bottom: 45px;
+}
+
+.desc p {
+	color: #2f2f2f;
+}
+
+t {
+	color: #003366;
+	font-weight: 700;
+}
+
+.desc .current {
+	margin-top: 10px;
+}
+
+imp {
+	padding: 6px;
+	color: white;
+	background: #003366;
+}
+
+sm {
+	font-size: 0.775em;
+	padding-right: 5px;
+}
+
+textarea {
+	resize: none;
+}
+
+.date {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/* Margin & Padding classes */
+.mt15 {
+	margin-top: 15px;
+}
+
+.ml15 {
+	margin-left: 15px;
+}
+
+.pt05 {
+	padding-top: 5px;
+}
+
+.pb05 {
+	padding-bottom: 5px;
+}
+
+.pb10 {
+	padding-bottom: 10px;
+}
+
+.pb15 {
+	padding-bottom: 15px;
+}
+
+.pb20 {
+	padding-bottom: 20px;
+}
+
+.pb25 {
+	padding-bottom: 25px;
+}
+
+.gutter-delete {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.gutter-delete .row {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+/*---------------------------------------------------
+     MEDIA QUERIES
+---------------------------------------------------*/
+/*
+@media only screen and (min-width: 320px) {
+    #headerwrap {
+        padding-top: 100px;
+    }
+}
+*/
+
+@media only screen and (min-width: 600px) {
+	.date {
+		padding-top: 0;
+	}
+	#work h4 {
+		padding-top: 0px;
+	}
+	.desc .item {
+		padding-bottom: 15px;
+	}
+	input[type='text']:focus, input[type='email']:focus, textarea:focus {
+		font-size: 1.14285714em;
+	}
+	.section-title {
+		text-align: right;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#headerwrap {
+		background: url(http://img.craigmcmurray.co/header_tablet_portrait.jpg) no-repeat center top;
+	}
+	#headerwrap h1 {
+		font-size: 3.25em;
+	}
+	#headerwrap h2 {
+		font-size: 2.5em;
+	}
+	#work .project-description {
+		padding-top: 0px;
+	}
+	form {
+		padding-bottom: 0;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	#headerwrap {
+		background: url(http://img.craigmcmurray.co/header_tablet_landscape.jpg) no-repeat center top;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	#headerwrap {
+		background: url(http://img.craigmcmurray.co/header.jpg) no-repeat center top;
+		text-align: center;
+		background-attachment: scroll;
+		background-position: center center;
+		width: 100%;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	#work .row:last-child {
+		margin-bottom: 35px;
+	}
+}
+
+/*---------------------------------------------------
+	Angular Material
+---------------------------------------------------*/
+md-fab-speed-dial.md-fab-top-right {
+	top: 0;
+	right: 0;
+	bottom: auto;
+	left: auto;
+	position: fixed;
+}
+
+@media only screen and (min-width: 768px) {
+	md-fab-speed-dial.md-fab-top-right {
+		top: 20px;
+		right: 20px;
+	}
+}
+
+a.md-button.md-primary.md-raised:not([disabled]):hover,
+a.md-button.md-primary.md-fab:not([disabled]):hover,
+.md-button.md-primary.md-raised:not([disabled]):hover,
+.md-button.md-primary.md-fab:not([disabled]):hover,
+a.md-button.md-primary.md-raised,
+a.md-button.md-primary.md-fab,
+.md-button.md-primary.md-raised,
+.md-button.md-primary.md-fab {
+	background-color: #003366;
+}
+
+md-fab-speed-dial md-fab-actions {
+	height: auto;
+}
