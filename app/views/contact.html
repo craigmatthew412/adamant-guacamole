@@ -9,10 +9,10 @@
 			<form id=contactfrm name=contact.contactfrm ng-submit="contact.sendMessage()" novalidate>
 				<div class="form-group">
 					<label for="contactName">Name (required)</label>
-					<input type="text" class="form-control" name="contactName" id="contactName" ng-model="contact.message.name" ng-model-options="{ updateOn: 'blur' }" ng-minlength="3" ng-maxlength="40" required/>
+					<input type="text" class="form-control" name="contactName" id="contactName" ng-model="contact.message.name" ng-model-options="{ updateOn: 'blur' }" ng-minlength="5" ng-maxlength="40" required/>
 					<ng-messages for="contact.contactfrm.contactName.$error" multiple ng-if='contact.contactfrm.contactName.$dirty' role="alert">
 						<ng-message when="required">Your name is required. I'd love to know who I'm communicating with!</ng-message>
-						<ng-message when="minlength">Your name must be at least 3 characters. Please use your full name!</ng-message>
+						<ng-message when="minlength">Your name must be at least 5 characters. Please use your full name!</ng-message>
 						<ng-message when="maxlength">Your name must be at most 40 characters. First and Last names only please!</ng-message>
 					</ng-messages>
 				</div>
