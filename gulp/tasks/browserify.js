@@ -22,7 +22,7 @@ function buildScript(file) {
 
 	var bundler = browserify({
 		entries: config.browserify.entries,
-		debug: true,
+		debug: false,
 		cache: {},
 		packageCache: {},
 		fullPaths: true

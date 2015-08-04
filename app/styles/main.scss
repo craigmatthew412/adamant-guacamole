@@ -76,7 +76,7 @@ p {
 a,
 a:focus,
 a:hover {
-	color: rgb(102, 132, 163);
+	color: #333333;
 	text-decoration: underline;
 	outline: 0;
 	cursor: pointer;
@@ -125,40 +125,8 @@ form {
 }
 
 /*---------------------------------------------------
-	3.1 Header Wrap
----------------------------------------------------*/
-#headerwrap {
-	background: url(http://img.craigmcmurray.co/header_tablet_landscape.jpg) no-repeat center top;
-	text-align: center;
-	background-attachment: scroll;
-	background-position: center center;
-	height: 100%;
-	width: 100%;
-	background-size: cover;
-}
-
-#headerwrap h1 {
-	margin-top: 0;
-	font-size: 2.25em;
-	color: black;
-}
-
-#headerwrap h2 {
-	font-size: 1.5em;
-}
-
-#headerwrap a:last-of-type {
-	margin-right: 0;
-}
-
-#headerwrap .enter-btn {
-	font-size: 1.5em;
-}
-
-/*---------------------------------------------------
 	3.0 Common Styles
 ---------------------------------------------------*/
-
 #aboutme,
 #work,
 #contactme {
@@ -179,11 +147,13 @@ form {
 	background-color: rgb(246,246,246);
 }
 
+/*
 #aboutme,
 #work,
 #resume {
 	color: #003366;
 }
+*/
 
 #aboutme p,
 #contactme p {
@@ -199,7 +169,6 @@ form {
 }
 
 #aboutme i {
-	color: #003366;
 	font-size: 1.25em;
 	padding-right: 8px;
 	vertical-align: middle;
@@ -250,19 +219,13 @@ form {
 /*---------------------------------------------------
 	3.4 Contact Wrap
 ---------------------------------------------------*/
-#contactme p,
-#contactme h3,
-#contactme h4 {
-	color: #003366;
-}
-
 #contactme t {
 	font-weight: 700;
 }
 
 #contactme .socialIcon {
 	padding-right: 20px;
-	color: #336699;
+	color: #2e2e2e;
 	font-size: 1.1em;
 }
 
@@ -305,7 +268,6 @@ form {
 }
 
 t {
-	color: #003366;
 	font-weight: 700;
 }
 
@@ -316,7 +278,7 @@ t {
 imp {
 	padding: 6px;
 	color: white;
-	background: #003366;
+	background: #333333;
 }
 
 sm {
@@ -331,6 +293,17 @@ textarea {
 .date {
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+ng-message {
+	display: inline-block;
+	margin-top: 5px;
+	color: #FF0000;
+	font-size: 0.8em;
+}
+
+ng-message:not(:last-of-type) {
+	margin-bottom: 5px;
 }
 
 /* Margin & Padding classes */
@@ -379,14 +352,6 @@ textarea {
 /*---------------------------------------------------
      MEDIA QUERIES
 ---------------------------------------------------*/
-/*
-@media only screen and (min-width: 320px) {
-    #headerwrap {
-        padding-top: 100px;
-    }
-}
-*/
-
 @media only screen and (min-width: 600px) {
 	.date {
 		padding-top: 0;
@@ -398,7 +363,7 @@ textarea {
 		padding-bottom: 15px;
 	}
 	input[type='text']:focus, input[type='email']:focus, textarea:focus {
-		font-size: 1.14285714em;
+		font-size: 16px;
 	}
 	.section-title {
 		text-align: right;
@@ -406,15 +371,6 @@ textarea {
 }
 
 @media only screen and (min-width: 768px) {
-	#headerwrap {
-		background: url(http://img.craigmcmurray.co/header_tablet_portrait.jpg) no-repeat center top;
-	}
-	#headerwrap h1 {
-		font-size: 3.25em;
-	}
-	#headerwrap h2 {
-		font-size: 2.5em;
-	}
 	#work .project-description {
 		padding-top: 0px;
 	}
@@ -423,24 +379,7 @@ textarea {
 	}
 }
 
-@media only screen and (min-width: 1024px) {
-	#headerwrap {
-		background: url(http://img.craigmcmurray.co/header_tablet_landscape.jpg) no-repeat center top;
-	}
-}
-
 @media only screen and (min-width: 1025px) {
-	#headerwrap {
-		background: url(http://img.craigmcmurray.co/header.jpg) no-repeat center top;
-		text-align: center;
-		background-attachment: scroll;
-		background-position: center center;
-		width: 100%;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
 	#work .row:last-child {
 		margin-bottom: 35px;
 	}
@@ -449,11 +388,19 @@ textarea {
 /*---------------------------------------------------
 	Angular Material
 ---------------------------------------------------*/
-md-fab-speed-dial.md-fab-top-right {
-	top: 0;
-	right: 0;
-	bottom: auto;
+md-fab-speed-dial.md-fab-top-left {
+	top: 10px;
+	right: auto;
+	bottom: 10px;
 	left: auto;
+	position: fixed;
+}
+
+md-fab-speed-dial.md-fab-bottom-left {
+	top: auto;
+	right: auto;
+	bottom: 10px;
+	left: 10px;
 	position: fixed;
 }
 
@@ -461,6 +408,14 @@ md-fab-speed-dial.md-fab-top-right {
 	md-fab-speed-dial.md-fab-top-right {
 		top: 20px;
 		right: 20px;
+	}
+	md-fab-speed-dial.md-fab-top-left {
+		top: 20px;
+		left: 20px;
+	}
+	md-fab-speed-dial.md-fab-bottom-left {
+		bottom: 20px;
+		left: 20px;
 	}
 }
 
@@ -472,9 +427,24 @@ a.md-button.md-primary.md-raised,
 a.md-button.md-primary.md-fab,
 .md-button.md-primary.md-raised,
 .md-button.md-primary.md-fab {
-	background-color: #003366;
+	background-color: #ffff7f;
+}
+
+a.md-button.md-primary.md-raised:not([disabled]) md-icon,
+a.md-button.md-primary.md-fab:not([disabled]) md-icon,
+.md-button.md-primary.md-raised:not([disabled]) md-icon,
+.md-button.md-primary.md-fab:not([disabled]) md-icon {
+	color: #333333;
 }
 
 md-fab-speed-dial md-fab-actions {
 	height: auto;
+}
+
+/*---------------------------------------------------
+	Twitter Bootstrap
+---------------------------------------------------*/
+.form-control,
+.btn {
+	border-radius: 0;
 }

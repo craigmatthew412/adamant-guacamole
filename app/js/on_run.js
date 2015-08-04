@@ -1,24 +1,20 @@
+/*global Modernizr*/
 'use strict';
 
 /**
  * @ngInject
  */
 function OnRun($rootScope, AppSettings) {
-
-	/*
-	// change page title based on state
-	$rootScope.$on('$stateChangeSuccess', function(event, toState) {
-		$rootScope.pageTitle = '';
-
-		if ( toState.data.title ) {
-			$rootScope.pageTitle += toState.data.title;
-			$rootScope.pageTitle += ' \u2014 ';
-		}
-
-		$rootScope.pageTitle += AppSettings.appTitle;
-	});
-	*/
-
+	//Set default value for Booleans
+	$rootScope.isMobile = true;
+	$rootScope.fabDirection = 'up';
+	//Check viewport size
+	if (Modernizr.mq('only all and (min-width: 1025px)')) {
+		//We are on desktop, flip the Booleans
+		$rootScope.isMobile = false;
+		$rootScope.fabDirection = 'down';
+	}
+	//Set the Page Title
 	$rootScope.pageTitle = AppSettings.appTitle;
 }
 

@@ -8,6 +8,7 @@ require('angular-animate');
 require('angular-aria');
 require('angular-chartjs');
 require('angular-material');
+require('angular-messages');
 require('angular-sanitize');
 require('angular-scroll');
 require('angular-touch');
@@ -25,6 +26,7 @@ angular.element(document).ready(function() {
 		'ngAnimate',
 		'ngAria',
 		'ngMaterial',
+		'ngMessages',
 		'ngSanitize',
 		'ngTouch',
 		'templates',

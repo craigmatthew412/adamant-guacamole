@@ -28,6 +28,7 @@
     "angular-aria": "^1.4.3",
     "angular-chartjs": "0.0.5",
     "angular-material": "^0.10.0",
+    "angular-messages": "^1.4.3",
     "angular-mocks": "^1.4.2",
     "angular-sanitize": "^1.4.3",
     "angular-scroll": "^0.7.1",

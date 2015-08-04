@@ -15,6 +15,11 @@ function ResumeController() {
 	 */
 	var vm = this;
 
+	/**
+	 * @desc Doughnut Chart Options.  It contains both Default options and Extended options.
+	 * @public
+	 * @type {Object}
+	 */
 	vm.doughnutOptions = {
 		defaultDoughnutOptions: {
 			segmentShowStroke: false,
@@ -22,11 +27,16 @@ function ResumeController() {
 			animationSteps: 100
 		},
 		extendedDoughnutOptions: {
-			segmentPositiveColor: '#003366',
-			segmentNegativeColor: '#d4dde6'
+			segmentPositiveColor: '#333333',
+			segmentNegativeColor: '#eee'
 		}
 	};
 
+	/**
+	 * @desc Doughnut Chart Data.  It contains the data for all of the Doughnut Charts to render.
+	 * @public
+	 * @type {Object}
+	 */
 	vm.doughnutData = {
 		problemSolving: [{
 			value: 90,

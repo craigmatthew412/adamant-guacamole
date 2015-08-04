@@ -58,6 +58,7 @@ function welcomeTextDirective($window) {
 		scope: {
 			'targetElementId': '@'
 		},
+		templateUrl: 'tpls/welcomeText.html',
 		link: link
 	};
 }
