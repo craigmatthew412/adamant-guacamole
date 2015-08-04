@@ -38,22 +38,18 @@ function ContactController($sce, $timeout, ContactService) {
 
 	//Finish button pressed
 	vm.sendMessage = function() {
-		console.log('contactfrm has been submitted');
 		//Get promise for sending the Message
 		ContactService.sendMessage(vm.message).then(function(response) {
-			console.log('contactfrm message success');
 			//console.log(response);
 			//Request successful, set the text
 			vm.contactSuccessText = $sce.trustAsHtml(response);
 			//Reset the form
 			vm.resetForm();
 		}, function(err) {
-			console.log('contactfrm message failure');
 			//Request failed, set the text
 			vm.contactErrorText = $sce.trustAsHtml(err);
 		});
 	};
-
 }
 
 //Declare the Controller

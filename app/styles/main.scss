@@ -232,6 +232,12 @@ form {
 #contactme label, .alert {
 	font-size: 0.8em;
 }
+
+.alert {
+	margin-bottom: 15px;
+	border-radius: 0;
+}
+
 #contactme sm {
 	font-weight: bold;
 }
@@ -259,7 +265,7 @@ footer {
 }
 
 footer p {
-	margin-bottom: 10px;
+	margin-bottom: 0;
 }
 
 /* Global Values */
@@ -388,6 +394,9 @@ ng-message:not(:last-of-type) {
 	}
 	form {
 		padding-bottom: 0;
+	}
+	.alert {
+		margin-bottom: 0;
 	}
 }
 
