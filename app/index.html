@@ -88,26 +88,26 @@
 	</div>
 </section>
 <div ui-view></div>
-<md-fab-speed-dial class="md-fling" md-direction="{{fab.direction}}" ng-class="fab.class">
+<md-fab-speed-dial class="md-scale" md-direction="{{fab.direction}}" md-open="fab.open" ng-class="fab.class">
 	<md-fab-trigger>
-		<md-button aria-label="menu" class="md-fab md-primary">
+		<md-button aria-label="menu" class="md-fab md-primary" ng-click="fab.open = !fab.open">
 			<md-icon md-font-library="material-icons">menu</md-icon>
 		</md-button>
 	</md-fab-trigger>
 	<md-fab-actions>
-		<md-button aria-label="Home" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="headerwrap">
+		<md-button aria-label="Home" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="headerwrap" ng-click="fab.open = !fab.open">
 			<md-icon md-font-library="material-icons">home</md-icon>
 		</md-button>
-		<md-button aria-label="About Me" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="aboutme">
+		<md-button aria-label="About Me" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="aboutme" ng-click="fab.open = !fab.open">
 			<md-icon md-font-library="material-icons">person</md-icon>
 		</md-button>
-		<md-button aria-label="Resume" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="resume">
+		<md-button aria-label="Resume" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="resume" ng-click="fab.open = !fab.open">
 			<md-icon md-font-library="material-icons">school</md-icon>
 		</md-button>
-		<md-button aria-label="Portfolio" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="work">
+		<md-button aria-label="Portfolio" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="work" ng-click="fab.open = !fab.open">
 			<md-icon md-font-library="material-icons">laptop mac</md-icon>
 		</md-button>
-		<md-button aria-label="Contact Me" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="contactme">
+		<md-button aria-label="Contact Me" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="contactme" ng-click="fab.open = !fab.open">
 			<md-icon md-font-library="material-icons">send</md-icon>
 		</md-button>
 	</md-fab-actions>

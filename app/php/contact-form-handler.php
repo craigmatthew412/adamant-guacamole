@@ -106,7 +106,7 @@ else {
 
     if(!is_null($name) && !is_null($email) && !is_null($message)) {
         if(mail($to, $subject, $mailBody, $headers)) {
-            echo "<i class='fa fa-check'></i>&nbsp;Thank you, $name, for reaching out to us!  We greatly value our customers and strive to provide the best experience possible.";
+            echo "<i class='fa fa-check'></i>&nbsp;Thank you, $name, for reaching out to me!  I love hearing from people on the Internets.";
         }
     }
 }

@@ -15,7 +15,8 @@ function OnRun($rootScope, AppSettings) {
 		//We are on desktop, change the properties
 		$rootScope.fab = {
 			class: 'md-fab-top-left',
-			direction: 'down'
+			direction: 'down',
+			open: false
 		};
 	}
 	//Set the Page Title
