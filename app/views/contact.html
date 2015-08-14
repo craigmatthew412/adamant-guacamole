@@ -33,14 +33,14 @@
 						<ng-message when=maxlength>Your message must be at most 1500 characters. Please keep it just a little shorter, I don't need your life history!</ng-message>
 					</ng-messages>
 				</div>
-				<p>
-					<button type=submit class="btn btn-success contact-form-button" disabled=disabled ng-disabled="contact.contactfrm.$invalid">Send</button>
-					<button type=button class="btn btn-danger contact-form-button ml15" disabled=disabled ng-disabled="contact.contactfrm.$pristine" ng-click="contact.resetForm()">Reset</button>
-				</p>
+				<div class="row no-gutters">
+					<button type=submit class="col-xs-12 col-sm-4 btn btn-success contact-form-button" disabled=disabled ng-disabled="contact.contactfrm.$invalid">Send</button>
+					<button type=button class="col-xs-12 col-sm-4 col-sm-offset-4 btn btn-danger contact-form-button" disabled=disabled ng-disabled="contact.contactfrm.$pristine" ng-click="contact.resetForm()">Reset</button>
+				</div>
 			</form>
 			<!--Show Alert Message-->
-			<div ng-bind-html="contact.contactSuccessText" ng-if="contact.contactSuccessText" class="alert alert-success ng-binding ng-hide mt15"></div>
-			<div ng-bind-html="contact.contactErrorText" ng-if="contact.contactErrorText" class="alert alert-danger ng-binding ng-hide mt15"></div>
+			<div ng-bind-html="contact.contactSuccessText" ng-show="contact.contactSuccessText" class="alert alert-success ng-binding ng-hide mt15"></div>
+			<div ng-bind-html="contact.contactErrorText" ng-show="contact.contactErrorText" class="alert alert-danger ng-binding ng-hide mt15"></div>
 		</div>
 		<div class=col-sm-3>
 			<h4>Find Me Here</h4>

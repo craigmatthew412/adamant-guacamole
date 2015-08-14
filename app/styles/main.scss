@@ -326,7 +326,7 @@ ng-message:not(:last-of-type) {
 
 /* Margin & Padding classes */
 .mt15 {
-	margin-top: 15px;
+	margin-top: 15px !important;
 }
 
 .ml15 {
@@ -407,36 +407,71 @@ ng-message:not(:last-of-type) {
 }
 
 /*---------------------------------------------------
-	Angular Material
+	Twitter Bootstrap
 ---------------------------------------------------*/
-md-fab-speed-dial.md-fab-top-left {
-	top: 10px;
-	right: auto;
-	bottom: 10px;
-	left: auto;
-	position: fixed;
+//BOOTSTRAP OVERRIDE: Removes the gutters from Bootstrap's columns
+.row.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+
+	> [class^="col-"],
+	> [class*=" col-"] {
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 
-md-fab-speed-dial.md-fab-bottom-left {
-	top: auto;
-	right: auto;
-	bottom: 10px;
-	left: 10px;
-	position: fixed;
+/*---------------------------------------------------
+	Angular Material
+---------------------------------------------------*/
+md-fab-speed-dial {
+	//overflow : visible; height : 0;
+
+	md-fab-actions {
+		height: auto;
+	}
+
+	&.md-fab-top-left {
+		top: 10px;
+		right: auto;
+		bottom: 10px;
+		left: auto;
+		position: fixed;
+	}
+
+	&.md-fab-bottom-left {
+		top: auto;
+		right: auto;
+		bottom: 10px;
+		left: 10px;
+		position: fixed;
+	}
 }
 
 @media only screen and (min-width: 768px) {
-	md-fab-speed-dial.md-fab-top-right {
-		top: 20px;
-		right: 20px;
+	md-fab-speed-dial {
+		&.md-fab-top-right {
+			top: 20px;
+			right: 20px;
+		}
+
+		&.md-fab-top-left {
+			top: 20px;
+			left: 20px;
+		}
+
+		&.md-fab-bottom-left {
+			bottom: 20px;
+			left: 20px;
+		}
 	}
-	md-fab-speed-dial.md-fab-top-left {
-		top: 20px;
-		left: 20px;
-	}
-	md-fab-speed-dial.md-fab-bottom-left {
-		bottom: 20px;
-		left: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+	form {
+		button.btn + button.btn {
+			margin: 15px 0;
+		}
 	}
 }
 
@@ -456,10 +491,6 @@ a.md-button.md-primary.md-fab:not([disabled]) md-icon,
 .md-button.md-primary.md-raised:not([disabled]) md-icon,
 .md-button.md-primary.md-fab:not([disabled]) md-icon {
 	color: #333333;
-}
-
-md-fab-speed-dial md-fab-actions {
-	height: auto;
 }
 
 /*---------------------------------------------------
