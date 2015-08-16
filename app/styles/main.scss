@@ -16,6 +16,11 @@
 //DSG Defined Variables
 @import 'vars';
 
+/*---------------------------------------------------
+	VARIABLES
+---------------------------------------------------*/
+$iphone4_landscape: 480px;
+$tablet_portrait: 768px;
 
 html,
 body,
@@ -130,8 +135,8 @@ form {
 #aboutme,
 #work,
 #contactme {
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 #aboutme h3,
@@ -158,22 +163,32 @@ form {
 #aboutme p,
 #contactme p {
 	margin-bottom: 0;
+	font-size: 0.875em;
 }
 
 /*---------------------------------------------------
 	3.1 About Me Wrap
 ---------------------------------------------------*/
-#aboutme h3 small {
-	display: block;
-	padding-top: 5px;
-}
+#aboutme {
+	h3 small {
+		display: block;
+		padding-top: 5px;
+	}
 
-#aboutme i {
-	font-size: 1.25em;
-	padding-right: 8px;
-	vertical-align: middle;
-}
+	i {
+		font-size: 1.25em;
+		padding-right: 8px;
+		vertical-align: middle;
+	}
 
+	img {
+		padding-bottom: 10px;
+	}
+
+	p:not(:last-of-type) {
+		margin-bottom: 5px;
+	}
+}
 /*---------------------------------------------------
 	3.2 Resume Wrap
 ---------------------------------------------------*/
@@ -260,6 +275,7 @@ form {
 	3.5 Footer Wrap
 ---------------------------------------------------*/
 footer {
+    padding-bottom: 20px;
 	text-align: center;
 	font-size: 0.75em;
 }
@@ -270,15 +286,15 @@ footer p {
 
 /* Global Values */
 .desc {
-	padding-top: 45px;
+	padding-top: 22.5px;
 }
 
 .desc:first-of-type {
-	padding-top: 60px;
+	padding-top: 30px;
 }
 
 .desc:last-of-type {
-	padding-bottom: 45px;
+	padding-bottom: 22.5px;
 }
 
 .desc p {
@@ -310,7 +326,7 @@ textarea {
 
 .date {
 	padding-top: 15px;
-	padding-bottom: 15px;
+	//padding-bottom: 15px;
 }
 
 ng-message {
@@ -370,6 +386,16 @@ ng-message:not(:last-of-type) {
 /*---------------------------------------------------
      MEDIA QUERIES
 ---------------------------------------------------*/
+@media screen and (min-width: $iphone4_landscape) {
+	#aboutme {
+		img {
+			padding-right: 15px; 
+			padding-bottom: 0;
+			width: 200px;
+		}
+	}
+}
+
 @media only screen and (min-width: 600px) {
 	.date {
 		padding-top: 0;
@@ -383,12 +409,34 @@ ng-message:not(:last-of-type) {
 	input[type='text']:focus, input[type='email']:focus, textarea:focus {
 		font-size: 16px;
 	}
+}
+
+@media only screen and (min-width: $tablet_portrait) {
+	#aboutme p,
+	#contactme p {
+		margin-bottom: 0;
+		font-size: 0.9375em;
+	}
+	#aboutme,
+	#work,
+	#contactme {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	.desc {
+		padding-top: 45px;
+	}
+
+	.desc:first-of-type {
+		padding-top: 60px;
+	}
+
+	.desc:last-of-type {
+		padding-bottom: 45px;
+	}
 	.section-title {
 		text-align: right;
 	}
-}
-
-@media only screen and (min-width: 768px) {
 	#work .project-description {
 		padding-top: 0px;
 	}
@@ -403,6 +451,11 @@ ng-message:not(:last-of-type) {
 @media only screen and (min-width: 1025px) {
 	#work .row:last-child {
 		margin-bottom: 35px;
+	}
+	#aboutme {
+		img {
+			width: 270px;
+		}
 	}
 }
 

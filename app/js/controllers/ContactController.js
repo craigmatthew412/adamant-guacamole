@@ -30,6 +30,7 @@ function ContactController($sce, $timeout, ContactService) {
 	vm.resetForm = function() {
 		vm.message = angular.copy(vm.blankMessage);
 		vm.contactfrm.$setPristine();
+		vm.contactfrm.$setUntouched();
 		vm.contactErrorText = null;
 		$timeout(function() {
 			vm.contactSuccessText = null;
@@ -45,9 +46,11 @@ function ContactController($sce, $timeout, ContactService) {
 			vm.contactSuccessText = $sce.trustAsHtml(response);
 			//Reset the form
 			vm.resetForm();
-		}, function(err) {
+			console.log(response);
+		}, function(reason) {
 			//Request failed, set the text
-			vm.contactErrorText = $sce.trustAsHtml(err);
+			vm.contactErrorText = $sce.trustAsHtml(reason);
+			console.log(reason);
 		});
 	};
 }

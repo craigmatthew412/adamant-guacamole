@@ -9,8 +9,8 @@
 			<form id=contactfrm name=contact.contactfrm ng-submit="contact.sendMessage()" novalidate>
 				<div class="form-group">
 					<label for="contactName">Name (required)</label>
-					<input type="text" class="form-control" name="contactName" id="contactName" ng-model="contact.message.name" ng-model-options="{ updateOn: 'blur' }" ng-minlength="5" ng-maxlength="40" required/>
-					<ng-messages for="contact.contactfrm.contactName.$error" multiple ng-if='contact.contactfrm.contactName.$dirty' role="alert">
+					<input type="text" class="form-control" name="contactName" id="contactName" ng-model="contact.message.name" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 3000, 'blur': 0 } }" ng-minlength="5" ng-maxlength="40" required/>
+					<ng-messages for="contact.contactfrm.contactName.$error" multiple ng-if='contact.contactfrm.contactName.$touched' role="alert">
 						<ng-message when="required">Your name is required. I'd love to know who I'm communicating with!</ng-message>
 						<ng-message when="minlength">Your name must be at least 5 characters. Please use your full name!</ng-message>
 						<ng-message when="maxlength">Your name must be at most 40 characters. First and Last names only please!</ng-message>
@@ -18,16 +18,16 @@
 				</div>
 				<div class="form-group">
 					<label for="contactEmail">Email (required)</label>
-					<input type="email" class="form-control" name="contactEmail" id="contactEmail" ng-model="contact.message.email" ng-model-options="{ updateOn: 'blur' }" required/>
-					<ng-messages for="contact.contactfrm.contactEmail.$error" multiple ng-if='contact.contactfrm.contactEmail.$dirty'>
+					<input type="email" class="form-control" name="contactEmail" id="contactEmail" ng-model="contact.message.email" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 3000, 'blur': 0 } }" required/>
+					<ng-messages for="contact.contactfrm.contactEmail.$error" multiple ng-if='contact.contactfrm.contactEmail.$touched'>
 						<ng-message when=required>Your email address is required. I'd love to be able to respond back to you!</ng-message>
 						<ng-message when=email>Your email address must be proper format (name@domain.tld). I need to know you aren't a robot!</ng-message>
 					</ng-messages>
 				</div>
 				<div class="form-group">
 					<label for="contactComment">Comment (required)</label>
-					<textarea id="contactComment" name="contactComment" class="form-control" cols="3" rows="8" ng-model="contact.message.comment" ng-model-options="{ updateOn: 'blur' }" ng-minlength="25" ng-maxlength="1000" required></textarea>
-					<ng-messages for="contact.contactfrm.contactComment.$error" multiple ng-if='contact.contactfrm.contactComment.$dirty'>
+					<textarea id="contactComment" name="contactComment" class="form-control" cols="3" rows="8" ng-model="contact.message.comment" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 3000, 'blur': 0 } }" ng-minlength="25" ng-maxlength="1000" required></textarea>
+					<ng-messages for="contact.contactfrm.contactComment.$error" multiple ng-if='contact.contactfrm.contactComment.$touched'>
 						<ng-message when=required>Your message is required. You have to tell me something!</ng-message>
 						<ng-message when=minlength>Your message must be at least 25 characters. Please tell me some more!</ng-message>
 						<ng-message when=maxlength>Your message must be at most 1500 characters. Please keep it just a little shorter, I don't need your life history!</ng-message>
@@ -35,7 +35,7 @@
 				</div>
 				<div class="row no-gutters">
 					<button type=submit class="col-xs-12 col-sm-4 btn btn-success contact-form-button" disabled=disabled ng-disabled="contact.contactfrm.$invalid">Send</button>
-					<button type=button class="col-xs-12 col-sm-4 col-sm-offset-4 btn btn-danger contact-form-button" disabled=disabled ng-disabled="contact.contactfrm.$pristine" ng-click="contact.resetForm()">Reset</button>
+					<button type=button class="col-xs-12 col-sm-4 col-sm-offset-4 btn btn-danger contact-form-button" disabled=disabled ng-click="contact.resetForm()" ng-disabled="contact.contactfrm.$pristine && !contact.contactfrm.contactName.$touched && !contact.contactfrm.contactEmail.$touched && !contact.contactfrm.contactComment.$touched">Reset</button>
 				</div>
 			</form>
 			<!--Show Alert Message-->
@@ -45,7 +45,6 @@
 		<div class=col-sm-3>
 			<h4>Find Me Here</h4>
 			<p>
-				<a href="https://plus.google.com/102683923188318089180/posts" target=_blank><i class="fa fa-google-plus socialIcon"></i></a>
 				<a href="https://twitter.com/CraigMatthew412" target=_blank><i class="fa fa-twitter socialIcon"></i></a>
 				<a href="http://www.linkedin.com/in/cmcmurray" target=_blank><i class="fa fa-linkedin socialIcon"></i></a>
 				<a href="mailto:craigmathew412@gmail.com"><i class="fa fa-envelope socialIcon"></i></a>
