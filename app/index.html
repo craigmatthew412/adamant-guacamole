@@ -21,18 +21,13 @@
 	<meta name=description content="">
 	<!-- TODO -->
 	<meta name=keywords content="">
-	<!-- Compiled SASS bundle (relative to /build output) -->
-	<link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
-	<!-- Compiled SASS bundle (relative to /build output) -->
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<!-- Modernizr must be the first script AFTER CSS -->
-	<script type="text/javascript" src="libraries/modernizr.custom.20633.js"></script>
 	<!-- Google Web Font -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel=stylesheet type='text/css'>
 	<!-- Google Web Font -->
 	<link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,700' rel=stylesheet type='text/css'>
-	<!-- Google Material Icons -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled SASS bundle (relative to /build output) -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- Critical CSS -->
 	<style type="text/css">
 		#headerwrap {
 			background: url(http://img.craigmcmurray.co/header_tablet_landscape.jpg) no-repeat center top;
@@ -87,6 +82,8 @@
 			}
 		}
 	</style>
+	<!-- Modernizr must be the first script AFTER CSS -->
+	<script type="text/javascript" src="libraries/modernizr.custom.20633.js"></script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -105,31 +102,7 @@
 	</div>
 </section>
 <div ui-view></div>
-<md-fab-speed-dial class="md-scale" md-direction="{{fab.direction}}" md-open="fab.open" ng-class="fab.class">
-	<md-fab-trigger>
-		<md-button aria-label="menu" class="md-fab md-primary" ng-click="fab.open = !fab.open">
-			<md-icon md-font-library="material-icons">menu</md-icon>
-		</md-button>
-	</md-fab-trigger>
-	<md-fab-actions>
-		<md-button aria-label="Home" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="headerwrap" ng-click="fab.open = !fab.open">
-			<md-icon md-font-library="material-icons">home</md-icon>
-		</md-button>
-		<md-button aria-label="About Me" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="aboutme" ng-click="fab.open = !fab.open">
-			<md-icon md-font-library="material-icons">person</md-icon>
-		</md-button>
-		<md-button aria-label="Resume" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="resume" ng-click="fab.open = !fab.open">
-			<md-icon md-font-library="material-icons">school</md-icon>
-		</md-button>
-		<md-button aria-label="Portfolio" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="work" ng-click="fab.open = !fab.open">
-			<md-icon md-font-library="material-icons">laptop mac</md-icon>
-		</md-button>
-		<md-button aria-label="Contact Me" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="contactme" ng-click="fab.open = !fab.open">
-			<md-icon md-font-library="material-icons">send</md-icon>
-		</md-button>
-	</md-fab-actions>
-</md-fab-speed-dial>
-
+<fab-menu></fab-menu>
 
 <!-- General JavaScript Polyfill -->
 <script type="text/javascript" src="//cdn.polyfill.io/v1/polyfill.min.js"></script>
@@ -138,6 +111,6 @@
 <!-- Chart.js -->
 <script type="text/javascript" src="libraries/Chart.min.js"></script>
 <!-- Browserified JavaScript Bundle containing our application -->
-<script type="text/javascript" src="js/main.js"></script>
+<script async type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

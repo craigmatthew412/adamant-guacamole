@@ -55,7 +55,7 @@ function welcomeTextDirective($window) {
 	//Direct Definition Object (DDO) style declaration
 	return {
 		restrict: 'A',
-		templateUrl: 'tpls/welcomeText.html',
+		templateUrl: 'tpls/Welcome.Text.Tpl.html',
 		link: link
 	};
 }

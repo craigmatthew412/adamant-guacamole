@@ -14,7 +14,7 @@ var angular = require('angular');
  */
 function ContactController($sce, $timeout, ContactService) {
 	/**
-	 * @desc The ViewModel Object.  Grab a reference to this to represent the ViewModel and to prevent scope bleeding.
+	 * @desc The ViewModel Object.  Grab a reference to this to represent the ViewModel and to prevent scope bleeding and capture context.
 	 * @public
 	 * @type {ContactController}
 	 */

@@ -8,11 +8,10 @@
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 //Font Awesome Icons
 @import '../../bower_components/font-awesome-sass/assets/stylesheets/font-awesome';
+//Angular Material
+@import '../../node_modules/angular-material/angular-material';
 //Bourbon
 //@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
-//Neat
-//@import '../../bower_components/neat/app/assets/stylesheets/neat';
-//@import '../../node_modules/angular-material/angular-material.css';
 //DSG Defined Variables
 @import 'vars';
 
@@ -478,12 +477,6 @@ ng-message:not(:last-of-type) {
 	Angular Material
 ---------------------------------------------------*/
 md-fab-speed-dial {
-	//overflow : visible; height : 0;
-
-	md-fab-actions {
-		height: auto;
-	}
-
 	&.md-fab-top-left {
 		top: 10px;
 		right: auto;

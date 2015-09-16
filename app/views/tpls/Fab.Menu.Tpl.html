@@ -1,0 +1,24 @@
+<md-fab-speed-dial md-open="menu.isOpen" md-direction="{{menu.direction}}" ng-class="[menu.placement, menu.style]">
+	<md-fab-trigger>
+		<md-button aria-label="Menu" class="md-fab md-primary">
+			<md-icon md-svg-src="images/ic_menu_black_48px.svg"></md-icon>
+		</md-button>
+	</md-fab-trigger>
+	<md-fab-actions>
+		<md-button aria-label="Home" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="headerwrap" ng-click="menu.isOpen = !menu.isOpen">
+			<md-icon md-svg-src="images/ic_home_black_48px.svg"></md-icon>
+		</md-button>
+		<md-button aria-label="About Me" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="aboutme" ng-click="menu.isOpen = !menu.isOpen">
+			<md-icon md-svg-src="images/ic_person_black_48px.svg"></md-icon>
+		</md-button>
+		<md-button aria-label="Resume" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="resume" ng-click="menu.isOpen = !menu.isOpen">
+			<md-icon md-svg-src="images/ic_school_black_48px.svg"></md-icon>
+		</md-button>
+		<md-button aria-label="Portfolio" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="work" ng-click="menu.isOpen = !menu.isOpen">
+			<md-icon md-svg-src="images/ic_laptop_mac_black_48px.svg"></md-icon>
+		</md-button>
+		<md-button aria-label="Contact Me" class="md-fab md-raised md-mini md-primary" du-smooth-scroll="contactme" ng-click="menu.isOpen = !menu.isOpen">
+			<md-icon md-svg-src="images/ic_send_black_48px.svg"></md-icon>
+		</md-button>
+	</md-fab-actions>
+</md-fab-speed-dial>
