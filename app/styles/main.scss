@@ -60,7 +60,7 @@ h4 {
 
 /* Paragraph & Typographic */
 p {
-	line-height: 28px;
+	line-height: 24px;
 	margin-bottom: 25px;
 }
 
@@ -193,70 +193,102 @@ form {
 ---------------------------------------------------*/
 #resume {
 	background-color: rgb(255,255,255);
+
+	.desc {
+		padding-top: 22.5px;
+
+		&:first-of-type {
+			padding-top: 30px;
+		}
+
+		&:last-of-type {
+			padding-bottom: 22.5px;
+		}
+
+		p {
+			color: #2f2f2f;
+		}
+	}
 }
 
 /*---------------------------------------------------
 	3.3 Portfolio Wrap
 ---------------------------------------------------*/
-#work .row {
-	margin-bottom: 35px;
-}
+#work {
+	.row {
+		margin-bottom: 35px;
 
-#work .row:last-child {
-	margin-bottom: 0px;
-}
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
 
-#work h3,
-#work h4 {
-	margin-top: 0px;
-}
+	h3,
+	h4 {
+		margin-top: 0px;
+	}
 
-#work i {
-	color: white;
-	font-size: 1.25em;
-	padding-right: 8px;
-	vertical-align: middle;
-}
+	i {
+		color: white;
+		font-size: 1.25em;
+		padding-right: 8px;
+		vertical-align: middle;
+	}
 
-#work more {
-	font-size: 0.9em;
-}
+	more {
+		font-size: 0.9em;
+	}
 
-#work .project-description {
-	padding-top: 15px;
-}
+	.project-description {
+		padding-top: 15px;
 
-#work .project-description p {
-	margin-bottom: 0;
+		p {
+			margin-bottom: 0;
+		}
+	}
 }
 
 /*---------------------------------------------------
 	3.4 Contact Wrap
 ---------------------------------------------------*/
-#contactme t {
-	font-weight: 700;
+#contactme {
+	t {
+		font-weight: 700;
+	}
+
+	.socialIcon {
+		padding-right: 20px;
+		color: #2e2e2e;
+		font-size: 1.1em;
+	}
+
+	label, .alert {
+		font-size: 0.8em;
+	}
+
+	.alert {
+		margin-bottom: 15px;
+		border-radius: 0;
+	}
 }
 
-#contactme .socialIcon {
-	padding-right: 20px;
-	color: #2e2e2e;
-	font-size: 1.1em;
+/*---------------------------------------------------
+	3.5 Footer Wrap
+---------------------------------------------------*/
+footer {
+    padding-bottom: 20px;
+	text-align: center;
+	font-size: 0.75em;
+
+	p {
+		line-height: 18px;
+		margin-bottom: 0;
+	}
 }
 
-#contactme label, .alert {
-	font-size: 0.8em;
-}
-
-.alert {
-	margin-bottom: 15px;
-	border-radius: 0;
-}
-
-#contactme sm {
-	font-weight: bold;
-}
-
-/* Copyright Wrap */
+/*---------------------------------------------------
+	3.6 Copyright Wrap
+---------------------------------------------------*/
 #copyright {
 	background: #2e2e2e;
 	padding-top: 5px;
@@ -271,35 +303,8 @@ form {
 }
 
 /*---------------------------------------------------
-	3.5 Footer Wrap
+	3.7 Global Values
 ---------------------------------------------------*/
-footer {
-    padding-bottom: 20px;
-	text-align: center;
-	font-size: 0.75em;
-}
-
-footer p {
-	margin-bottom: 0;
-}
-
-/* Global Values */
-.desc {
-	padding-top: 22.5px;
-}
-
-.desc:first-of-type {
-	padding-top: 30px;
-}
-
-.desc:last-of-type {
-	padding-bottom: 22.5px;
-}
-
-.desc p {
-	color: #2f2f2f;
-}
-
 t {
 	font-weight: 700;
 }
@@ -315,8 +320,9 @@ imp {
 }
 
 sm {
-	font-size: 0.775em;
 	padding-right: 5px;
+	font-size: 0.775em;
+	font-weight: bold;
 }
 
 textarea {
@@ -333,10 +339,10 @@ ng-message {
 	margin-top: 5px;
 	color: #FF0000;
 	font-size: 0.8em;
-}
 
-ng-message:not(:last-of-type) {
-	margin-bottom: 5px;
+	&:not(:last-of-type) {
+		margin-bottom: 5px;
+	}
 }
 
 /* Margin & Padding classes */
@@ -375,11 +381,11 @@ ng-message:not(:last-of-type) {
 .gutter-delete {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-}
 
-.gutter-delete .row {
-	margin-left: 0 !important;
-	margin-right: 0 !important;
+	.row {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
 }
 
 /*---------------------------------------------------
@@ -411,42 +417,57 @@ ng-message:not(:last-of-type) {
 }
 
 @media only screen and (min-width: $tablet_portrait) {
-	#aboutme p,
-	#contactme p {
-		margin-bottom: 0;
-		font-size: 0.9375em;
+	#aboutme,
+	#contactme {
+		p {
+			margin-bottom: 0;
+			font-size: 0.9375em;
+		}
 	}
+
 	#aboutme,
 	#work,
 	#contactme {
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
+
 	.desc {
 		padding-top: 45px;
+
+		&:first-of-type {
+			padding-top: 60px;
+		}
+
+		&:last-of-type {
+			padding-bottom: 45px;
+		}
 	}
 
-	.desc:first-of-type {
-		padding-top: 60px;
-	}
-
-	.desc:last-of-type {
-		padding-bottom: 45px;
-	}
 	.section-title {
 		text-align: right;
 	}
+
 	#work .project-description {
 		padding-top: 0px;
 	}
+
 	form {
 		padding-bottom: 0;
 	}
+
 	.alert {
 		margin-bottom: 0;
 	}
+
+	#contactme {
+		button:first-of-type {
+			margin-right: 20px;
+		}
+	}
 }
 
+//Desktop
 @media only screen and (min-width: 1025px) {
 	#work .row:last-child {
 		margin-bottom: 35px;

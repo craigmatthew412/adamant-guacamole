@@ -116,10 +116,10 @@ function ResumeController() {
 			color: vm.doughnutOptions.extendedDoughnutOptions.segmentNegativeColor
 		}],
 		userExperience: [{
-			value: 85,
+			value: 75,
 			color: vm.doughnutOptions.extendedDoughnutOptions.segmentPositiveColor
 		}, {
-			value: 15,
+			value: 25,
 			color: vm.doughnutOptions.extendedDoughnutOptions.segmentNegativeColor
 		}]
 	};
