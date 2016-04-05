@@ -94,6 +94,13 @@ function ResumeController() {
 			value: 15,
 			color: vm.doughnutOptions.extendedDoughnutOptions.segmentNegativeColor
 		}],
+		nodeJS: [{
+			value: 65,
+			color: vm.doughnutOptions.extendedDoughnutOptions.segmentPositiveColor
+		}, {
+			value: 35,
+			color: vm.doughnutOptions.extendedDoughnutOptions.segmentNegativeColor
+		}],
 		noSQL: [{
 			value: 65,
 			color: vm.doughnutOptions.extendedDoughnutOptions.segmentPositiveColor

@@ -2,7 +2,7 @@
 
 var angular = require('angular');
 
-// angular modules
+//angular modules
 require('angular-ui-router');
 require('angular-animate');
 require('angular-aria');
@@ -11,7 +11,7 @@ require('angular-material');
 require('angular-messages');
 require('angular-sanitize');
 require('angular-scroll');
-require('angular-touch');
+//require('angular-touch');
 require('./templates');
 require('./controllers/_index');
 require('./services/_index');
@@ -28,7 +28,7 @@ angular.element(document).ready(function() {
 		'ngMaterial',
 		'ngMessages',
 		'ngSanitize',
-		'ngTouch',
+		//'ngTouch',
 		'templates',
 		'app.controllers',
 		'app.services',
