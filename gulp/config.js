@@ -10,7 +10,7 @@ module.exports = {
   },
 
   'scripts': {
-    'src' : 'app/js/**/*.js',
+    'src' : ['app/js/**/*.js', '!app/js/templates.js'],
     'dest': 'build/js'
   },
 

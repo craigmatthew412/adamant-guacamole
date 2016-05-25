@@ -15,8 +15,7 @@
     "sass",
     "karma",
     "jasmine",
-    "protractor",
-    "boilerplate"
+    "protractor"
   ],
   "private": true,
   "engines": {
@@ -55,6 +54,7 @@
     "gulp-htmlmin": "^2.0.0",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^1.1.0",
+    "gulp-jscs": "^3.0.2",
     "gulp-jshint": "^1.8.3",
     "gulp-karma": "0.0.4",
     "gulp-notify": "^2.0.0",
@@ -78,7 +78,7 @@
     "morgan": "^1.2.2",
     "pretty-hrtime": "^0.2.2",
     "protractor": "^1.2.0",
-    "run-sequence": "^0.3.6",
+    "run-sequence": "^0.3.7",
     "tiny-lr": "0.0.9",
     "uglifyify": "^2.5.0",
     "vinyl-buffer": "^1.0.0",

@@ -12,7 +12,7 @@ gulp.task('watch', ['browserSync', 'server'], function() {
   gulp.watch(config.fonts.src,		['fonts']);
   gulp.watch(config.data.src,	    ['data']);
   gulp.watch(config.resources.src,  ['resources']);
-  gulp.watch(config.libraries.src,	['php']);
+  gulp.watch(config.php.src,        ['php']);
   gulp.watch(config.libraries.src,	['libraries']);
   gulp.watch(config.views.watch,	['views']);
 

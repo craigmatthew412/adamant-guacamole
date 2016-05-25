@@ -1,11 +1,8 @@
 'use strict';
 
-var config = require('../config');
-var gulp   = require('gulp');
-var jshint = require('gulp-jshint');
+var gulp        = require('gulp');
+var runSequence = require('run-sequence');
 
 gulp.task('lint', function() {
-  return gulp.src([config.scripts.src, '!app/js/templates.js'])
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
+  return runSequence('lint-jshint', 'lint-jscs');
 });

@@ -81,7 +81,7 @@ if($errors) {
     //Set the response code to failure
     http_response_code(400);
     //Die and return errors
-    die('<i class="fa fa-warning"></i>&nbsp;Oops, please correct the following errors:<br><ul>'. $errorText .'</ul>');
+    die('<div id="php-error"><i class="fa fa-warning"></i>&nbsp;Oops, please correct the following errors:<br><ul>'. $errorText .'</ul></div>');
     //echo '<div class="alert alert-error">The following errors occured:<br><ul>'. $errorText .'</ul></div>';
 
 }
@@ -107,6 +107,13 @@ else {
     if(!is_null($name) && !is_null($email) && !is_null($message)) {
         if(mail($to, $subject, $mailBody, $headers)) {
             echo "<i class='fa fa-check'></i>&nbsp;Thank you, $name, for reaching out to me!  I love hearing from people on the Internets.";
+        }
+        else {
+            //Set the response code to failure
+            http_response_code(400);
+
+            //Die and return errors
+            die('<div id="php-error"><i class="fa fa-warning"></i>&nbsp;Oops, there was a problem sending your message. Please try again later!</div>');
         }
     }
 }
