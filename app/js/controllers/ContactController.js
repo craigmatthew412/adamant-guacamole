@@ -46,11 +46,11 @@ function ContactController($sce, $timeout, ContactService) {
 			vm.contactSuccessText = $sce.trustAsHtml(response);
 			//Reset the form
 			vm.resetForm();
-			console.log(response);
+			//console.log(response);
 		}, function(reason) {
 			//Request failed, set the text
 			vm.contactErrorText = $sce.trustAsHtml(reason);
-			console.log(reason);
+			//console.log(reason);
 		});
 	};
 }

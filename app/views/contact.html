@@ -9,7 +9,7 @@
 			<form id=contactfrm name=contact.contactfrm ng-submit="contact.sendMessage()" novalidate>
 				<div class="form-group">
 					<label for="contactName">Name (required)</label>
-					<input type="text" class="form-control" name="contactName" id="contactName" ng-model="contact.message.name" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 3000, 'blur': 0 } }" ng-minlength="5" ng-maxlength="40" required/>
+					<input type="text" class="form-control" name="contactName" id="contactName" ng-model="contact.message.name" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 2000, 'blur': 0 } }" ng-minlength="5" ng-maxlength="40" required/>
 					<ng-messages for="contact.contactfrm.contactName.$error" multiple ng-if='contact.contactfrm.contactName.$touched' role="alert">
 						<ng-message when="required">Your name is required. I'd love to know who I'm communicating with!</ng-message>
 						<ng-message when="minlength">Your name must be at least 5 characters. Please use your full name!</ng-message>
@@ -18,7 +18,7 @@
 				</div>
 				<div class="form-group">
 					<label for="contactEmail">Email (required)</label>
-					<input type="email" class="form-control" name="contactEmail" id="contactEmail" ng-model="contact.message.email" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 3000, 'blur': 0 } }" required/>
+					<input type="email" class="form-control" name="contactEmail" id="contactEmail" ng-model="contact.message.email" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 2000, 'blur': 0 } }" required/>
 					<ng-messages for="contact.contactfrm.contactEmail.$error" multiple ng-if='contact.contactfrm.contactEmail.$touched'>
 						<ng-message when=required>Your email address is required. I'd love to be able to respond back to you!</ng-message>
 						<ng-message when=email>Your email address must be proper format (name@domain.tld). I need to know you aren't a robot!</ng-message>
@@ -26,7 +26,7 @@
 				</div>
 				<div class="form-group">
 					<label for="contactComment">Comment (required)</label>
-					<textarea id="contactComment" name="contactComment" class="form-control" cols="3" rows="8" ng-model="contact.message.comment" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 3000, 'blur': 0 } }" ng-minlength="25" ng-maxlength="1000" required></textarea>
+					<textarea id="contactComment" name="contactComment" class="form-control" cols="3" rows="8" ng-model="contact.message.comment" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 2000, 'blur': 0 } }" ng-minlength="25" ng-maxlength="1000" required></textarea>
 					<ng-messages for="contact.contactfrm.contactComment.$error" multiple ng-if='contact.contactfrm.contactComment.$touched'>
 						<ng-message when=required>Your message is required. You have to tell me something!</ng-message>
 						<ng-message when=minlength>Your message must be at least 25 characters. Please tell me some more!</ng-message>

@@ -25,7 +25,7 @@ function buildScript(file) {
 		debug: false,
 		cache: {},
 		packageCache: {},
-		fullPaths: true
+		fullPaths: false
 	}, watchify.args);
 
 	if ( !global.isProd ) {

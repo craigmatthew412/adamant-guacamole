@@ -24,15 +24,12 @@ function ContactService($http, $q) {
 			url: 'php/contact-form-handler.php',
 			data: form_data,
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-		}).success(function(data, status, headers) {
-			console.log('contactfrm message resolved!');
-			//console.log(data);
-			console.log(status);
-			console.log(headers);
+		}).then(function resolved(response) {
+			console.log('response: ', response);
 			//Resolve the deferred
-			deferred.resolve(data);
-		}).error(function(reason) {
-			console.log('contactfrm message rejected!');
+			deferred.resolve(response.data);
+		}, function rejected(reason) {
+			console.log('contactfrm message rejected! reason: ', reason);
 			//Reject the deferred
 			deferred.reject(reason);
 		});
