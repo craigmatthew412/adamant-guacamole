@@ -8,7 +8,7 @@ var AppSettings = {
 	'appleMobileWebAppCapable': 'yes',
 	'appleMobileWebAppStatusBarStyle': 'black-translucent',
 	'robots': 'noarchive',
-	'developmentMode': true
+	'developmentMode': false
 };
 
 module.exports = AppSettings;

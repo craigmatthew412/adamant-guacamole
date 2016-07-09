@@ -1,4 +1,4 @@
-<md-fab-speed-dial md-open="menu.isOpen" md-direction="{{menu.direction}}" ng-class="[menu.placement, menu.style]">
+<md-fab-speed-dial md-open="menu.isOpen" md-direction="{{menu.direction}}" ng-mouseenter="menu.isOpen = true" ng-mouseleave="menu.isOpen = false" ng-class="[menu.placement, menu.style]">
 	<md-fab-trigger>
 		<md-button aria-label="Menu" class="md-fab md-primary">
 			<md-icon md-svg-src="images/ic_menu_black_48px.svg"></md-icon>
