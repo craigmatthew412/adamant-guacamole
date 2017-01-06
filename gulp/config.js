@@ -4,6 +4,11 @@ module.exports = {
 
   'serverport': 4000,
 
+  'apache': {
+    'src' : ['.htaccess', 'crossdomain.xml', 'robots.txt'],
+    'dest': 'build/'
+  },
+
   'styles': {
     'src' : 'app/styles/**/*.scss',
     'dest': 'build/css'

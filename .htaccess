@@ -343,6 +343,33 @@ AddDefaultCharset utf-8
 </IfModule>
 
 # ----------------------------------------------------------------------
+# | AngularJS UI-Router Refresh                                        |
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+    # Don't rewrite files or directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Rewrite everything else to index.html to allow html5 state links
+    RewriteRule ^ index.html [L]
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Wildcard SSL for SG                                                |
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} ^sg.craigmcmurray.co$
+    RewriteCond %{REQUEST_URI} !^/subfolder/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /subfolder/$1
+    RewriteCond %{HTTP_HOST} ^sg.craigmcmurray.co$
+    RewriteRule ^(/)?$ subfolder/index.html [L]
+</IfModule>
+
+# ----------------------------------------------------------------------
 # | Forcing `https://`                                                 |
 # ----------------------------------------------------------------------
 
